@@ -1,0 +1,17 @@
+﻿<Page
+    x:Class="stock_databasegui.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:stock_databasegui"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <TextBox x:Name ="stockData" HorizontalAlignment="Left" Margin="91,144,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="49" Width="137"/>
+        <TextBox HorizontalAlignment="Left" IsReadOnly="True" Margin="92,56,0,0" Text="Amount" TextWrapping="Wrap" VerticalAlignment="Top" TextChanged="TextBox_TextChanged" Width="136" Height="41"/>
+        <Button Content="Enter" Click="Button_Click" Margin="287,153,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Page>
