@@ -9,9 +9,38 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <TextBox x:Name ="stockData" HorizontalAlignment="Left" Margin="91,144,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="49" Width="137"/>
-        <TextBox HorizontalAlignment="Left" IsReadOnly="True" Margin="92,56,0,0" Text="Amount" TextWrapping="Wrap" VerticalAlignment="Top" TextChanged="TextBox_TextChanged" Width="136" Height="41"/>
-        <Button Content="Enter" Click="Button_Click" Margin="287,153,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name ="stockData1" HorizontalAlignment="Left" Margin="91,169,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="49" Width="137"/>
+        <TextBox HorizontalAlignment="Left" IsReadOnly="True" Margin="92,101,0,0" Text="Stock id" TextWrapping="Wrap" VerticalAlignment="Top" TextChanged="TextBox_TextChanged" Width="136" Height="41"/>
+        <Button Content="Submit" Click="Button_Click" Margin="966,148,0,0" VerticalAlignment="Top" Width="229"/>
+        <TextBox x:Name ="stockData_Copy7" HorizontalAlignment="Left" Margin="306,169,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="49" Width="137"/>
+        <TextBox HorizontalAlignment="Left" IsReadOnly="True" Margin="307,101,0,0" Text="Stock Name" TextWrapping="Wrap" VerticalAlignment="Top" TextChanged="TextBox_TextChanged" Width="136" Height="41"/>
+        <TextBox HorizontalAlignment="Left" IsReadOnly="True" Margin="522,101,0,0" Text="        Amount" TextWrapping="Wrap" VerticalAlignment="Top" TextChanged="TextBox_TextChanged" Width="136" Height="41"/>
+        <TextBox x:Name ="stockData_Copy8" HorizontalAlignment="Left" Margin="522,169,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="49" Width="137"/>
+        <TextBox HorizontalAlignment="Left" IsReadOnly="True" Margin="751,101,0,0" Text="           Price" TextWrapping="Wrap" VerticalAlignment="Top" TextChanged="TextBox_TextChanged" Width="136" Height="41"/>
+        <TextBox x:Name ="stockData_Copy9" HorizontalAlignment="Left" Margin="750,169,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="49" Width="137"/>
+        <TextBox HorizontalAlignment="Left" IsReadOnly="True" Margin="455,29,0,0" Text="Stock Data Table" TextWrapping="Wrap" VerticalAlignment="Top" TextChanged="TextBox_TextChanged" Width="136" Height="41"/>
+        <TextBox HorizontalAlignment="Left" IsReadOnly="True" Margin="455,260,0,0" Text="Order Fill Data Table" TextWrapping="Wrap" VerticalAlignment="Top" TextChanged="TextBox_TextChanged" Width="136" Height="46"/>
+        <TextBox x:Name ="stockData_Copy10" HorizontalAlignment="Left" Margin="91,400,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="49" Width="137"/>
+        <TextBox HorizontalAlignment="Left" IsReadOnly="True" Margin="92,332,0,0" Text="Orderid" TextWrapping="Wrap" VerticalAlignment="Top" TextChanged="TextBox_TextChanged" Width="136" Height="41"/>
+        <TextBox x:Name ="stockData_Copy11" HorizontalAlignment="Left" Margin="306,400,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="49" Width="137"/>
+        <TextBox HorizontalAlignment="Left" IsReadOnly="True" Margin="307,332,0,0" Text="Retailer Name" TextWrapping="Wrap" VerticalAlignment="Top" TextChanged="TextBox_TextChanged" Width="136" Height="41"/>
+        <TextBox HorizontalAlignment="Left" IsReadOnly="True" Margin="522,332,0,0" Text="   Shipping Time" TextWrapping="Wrap" VerticalAlignment="Top" TextChanged="TextBox_TextChanged" Width="136" Height="41"/>
+        <TextBox x:Name ="stockData_Copy12" HorizontalAlignment="Left" Margin="522,400,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="49" Width="137"/>
+        <TextBox HorizontalAlignment="Left" IsReadOnly="True" Margin="751,332,0,0" Text="      Date Paid" TextWrapping="Wrap" VerticalAlignment="Top" TextChanged="TextBox_TextChanged" Width="136" Height="41"/>
+        <TextBox x:Name ="stockData_Copy13" HorizontalAlignment="Left" Margin="750,400,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="49" Width="137"/>
+        <TextBox x:Name ="stockData_Copy" HorizontalAlignment="Left" Margin="91,619,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="49" Width="137"/>
+        <TextBox HorizontalAlignment="Left" IsReadOnly="True" Margin="92,551,0,0" Text="Personalid" TextWrapping="Wrap" VerticalAlignment="Top" TextChanged="TextBox_TextChanged" Width="136" Height="41"/>
+        <TextBox x:Name ="stockData_Copy1" HorizontalAlignment="Left" Margin="306,619,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="49" Width="137"/>
+        <TextBox HorizontalAlignment="Left" IsReadOnly="True" Margin="307,551,0,0" Text="First Name " TextWrapping="Wrap" VerticalAlignment="Top" TextChanged="TextBox_TextChanged" Width="136" Height="41"/>
+        <TextBox HorizontalAlignment="Left" IsReadOnly="True" Margin="522,551,0,0" Text="   Middle Initial" TextWrapping="Wrap" VerticalAlignment="Top" TextChanged="TextBox_TextChanged" Width="136" Height="41"/>
+        <TextBox x:Name ="stockData_Copy2" HorizontalAlignment="Left" Margin="522,619,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="49" Width="137"/>
+        <TextBox HorizontalAlignment="Left" IsReadOnly="True" Margin="751,551,0,0" Text="      Last name" TextWrapping="Wrap" VerticalAlignment="Top" TextChanged="TextBox_TextChanged" Width="136" Height="41"/>
+        <TextBox x:Name ="stockData_Copy3" HorizontalAlignment="Left" Margin="750,619,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="49" Width="137"/>
+        <TextBox HorizontalAlignment="Left" IsReadOnly="True" Margin="455,0,0,0" Text="Customer Detail Table" TextWrapping="Wrap" VerticalAlignment="Center" TextChanged="TextBox_TextChanged" Width="136" Height="46"/>
+        <TextBox HorizontalAlignment="Left" IsReadOnly="True" Margin="967,551,0,0" Text="Mobile Phone #" TextWrapping="Wrap" VerticalAlignment="Top" TextChanged="TextBox_TextChanged" Width="136" Height="41"/>
+        <TextBox x:Name ="stockData_Copy4" HorizontalAlignment="Left" Margin="966,619,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="49" Width="137"/>
+        <TextBox HorizontalAlignment="Left" IsReadOnly="True" Margin="1188,551,0,0" Text="           Email" TextWrapping="Wrap" VerticalAlignment="Top" TextChanged="TextBox_TextChanged" Width="136" Height="41"/>
+        <TextBox x:Name ="stockData_Copy5" HorizontalAlignment="Left" Margin="1187,619,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="49" Width="137"/>
 
     </Grid>
 </Page>
