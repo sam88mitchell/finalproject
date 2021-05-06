@@ -6,12 +6,20 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Height="775" Width="546">
 
-    <Grid>
-        <TextBox x:Name ="stockData" HorizontalAlignment="Left" Margin="91,144,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="49" Width="137"/>
-        <TextBox HorizontalAlignment="Left" IsReadOnly="True" Margin="92,56,0,0" Text="Amount" TextWrapping="Wrap" VerticalAlignment="Top" TextChanged="TextBox_TextChanged" Width="136" Height="41"/>
-        <Button Content="Enter" Click="Button_Click" Margin="287,153,0,0" VerticalAlignment="Top"/>
-
-    </Grid>
+  <Grid>
+    <TextBox HorizontalAlignment="Center" IsReadOnly="True" HorizontalTextAlignment="Center" Text="   Please Enter the Following Information" Foreground="White" FontWeight="Bold" IsColorFontEnabled="True" FontSize="26px" Background="BlueViolet"  VerticalAlignment="Top" Width="546" Height="48" Margin="0,2,0,0"/>
+    <TextBox x:Name ="stock_id" HorizontalAlignment="Left" Margin="88,120,0,0" Text="" FontSize="16px" TextWrapping="Wrap" VerticalAlignment="Top" Height="49" Width="349"/>
+    <TextBox HorizontalAlignment="Left" IsReadOnly="True" Margin="88,80,0,0" Text="Product ID" FontSize="20px" TextWrapping="Wrap" VerticalAlignment="Top" Width="136" Height="40"/>
+    <Button Content="Submit" Foreground="White" Click="Button_Click" Margin="90,611,0,0" VerticalAlignment="Top" Width="353" Height="37" Background="BlueViolet" FontWeight="Bold" FontSize="16px"/>
+    <TextBox HorizontalAlignment="Left" IsReadOnly="True" Margin="90,220,0,0" Text="Type" FontSize="20px" TextWrapping="Wrap" VerticalAlignment="Top" Width="136" Height="40"/>
+    <TextBox x:Name ="stock_type" FontSize="16px" HorizontalAlignment="Left" Margin="90,260,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="49" Width="349"/>
+    <TextBox HorizontalAlignment="Left" IsReadOnly="True" Margin="90,360,0,0" Text="Amount" FontSize="20px" TextWrapping="Wrap" VerticalAlignment="Top" Width="136" Height="40"/>
+    <TextBox x:Name ="stock_amount" FontSize="16px" HorizontalAlignment="Left" Margin="90,400,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="49" Width="349"/>
+    <TextBox HorizontalAlignment="Left" IsReadOnly="True" Margin="90,500,0,0" Text="Price" FontSize="20px" TextWrapping="Wrap" VerticalAlignment="Top" Width="136" Height="40"/>
+    <TextBox x:Name ="stock_price" FontSize="16px" HorizontalAlignment="Left" Margin="90,540,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="49" Width="349"/>
+    <Button Content="Clear" Click="Cancel_Click"  Margin="90,667,0,0" VerticalAlignment="Top" Width="353" Height="35" Background="Orange" Foreground="White" FontWeight="Bold" FontSize="16px"/>
+    <TextBlock x:Name="Error" HorizontalAlignment="Left" HorizontalTextAlignment="Center" Margin="96,728,0,0" FontSize="16px" Text="Error: Invalid Values" FontWeight="Bold" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="Red" Width="344" RenderTransformOrigin="0.432,0.333" Visibility="{Binding Path=ErrorVisible, Converter={StaticResource BoolToVisConverter}}" />
+  </Grid>
 </Page>

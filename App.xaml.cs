@@ -22,9 +22,9 @@ namespace stock_databasegui
     /// </summary>
     sealed partial class App : Application
     {
-       private string connectionstring = @"Data Source=smitchell.database.windows.net;Initial Catalog = stock_database2; User ID = admin1; Password=Vapor@nexus43";
-       public string Connectionstring { get => connectionstring; set => connectionstring = value; }
-    public App()
+        private string connectionstring = @"Data Source=smitchell.database.windows.net;Initial Catalog = stock_database2; User ID = admin1; Password=Vapor@nexus43";
+        public string Connectionstring { get => connectionstring; set => connectionstring = value; }
+        public App()
         {
             this.InitializeComponent();
             this.Suspending += OnSuspending;

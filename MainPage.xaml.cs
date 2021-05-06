@@ -24,41 +24,68 @@ namespace stock_databasegui
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        public Popup ErrorPopupPage;
         public MainPage()
         {
             this.InitializeComponent();
         }
-
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        private void Cancel_Click(object sender, RoutedEventArgs e)
         {
+            stock_id.Text = null;
+            stock_type.Text = null;
+            stock_amount.Text = null;
+            stock_price.Text = null;
+            errorVisible = false;
+        }
 
+        private bool errorVisible = false;
+
+        public bool ErrorVisible
+        {
+            get
+            {
+                return errorVisible;
+            }
+
+            set
+            {
+                errorVisible = value;
+            }
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            string WriteStockDataQuery = "SET IDENTITY_INSERT stock_data ON INSERT INTO stock_data (stockid, stock_type, stock_amount, stock_pricing) VALUES ('', '', '" + stockData.Text + "', '')";
-
-            try
+            if (stock_id.Text != null && stock_type.Text != null && stock_amount.Text != null && stock_price.Text != null)
             {
-                using (SqlConnection conn = new SqlConnection((App.Current as App).Connectionstring))
-                {
-                    conn.Open();
-                    if (conn.State == System.Data.ConnectionState.Open)
-                    {
-                        using (SqlCommand cmd = conn.CreateCommand())
-                        {
+                string WriteStockDataQuery = $"SET IDENTITY_INSERT stock_data ON INSERT INTO stock_data (stockid, stock_type, stock_amount, stock_pricing) VALUES ('{stock_id.Text}', '{stock_type.Text}', '{stock_amount.Text}', '{stock_price.Text}')";
 
-                            cmd.CommandText = WriteStockDataQuery;
-                            cmd.ExecuteNonQuery();
-                            Debug.WriteLine("completed");
+                try
+                {
+                    using (SqlConnection conn = new SqlConnection((App.Current as App).Connectionstring))
+                    {
+                        conn.Open();
+                        if (conn.State == System.Data.ConnectionState.Open)
+                        {
+                            using (SqlCommand cmd = conn.CreateCommand())
+                            {
+
+                                cmd.CommandText = WriteStockDataQuery;
+                                cmd.ExecuteNonQuery();
+                                Debug.WriteLine("completed");
+                            }
                         }
                     }
                 }
+                catch (Exception eSql)
+                {
+                    Debug.WriteLine("Exceptioon: " + eSql.Message);
+                }
             }
-            catch (Exception eSql)
+            else
             {
-                Debug.WriteLine("Exceptioon: " + eSql.Message);
+                errorVisible = true;
             }
         }
+
     }
 }
